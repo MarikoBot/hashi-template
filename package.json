@@ -2,12 +2,13 @@
   "name": "bot-template",
   "version": "0.1.0",
   "description": "A bot template to use the hashi package.",
-  "main": "lib/app/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "run-builder": "node builder.js",
     "prettier": "prettier -w src",
     "save": "git add ./",
     "build": "npm run run-builder && npm run prettier && tsc && npm run save",
+    "dev": "npm install @elouannh/hashi@latest && npm run build && node .",
     "prepublish": "npm run build && git commit -m \"[AUTO] Build\"",
     "publish-patch": "npm version patch && git push && git push --tags",
     "publish-minor": "npm version minor && git push && git push --tags",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/elouannh/hashi-template#readme",
   "dependencies": {
-    "@elouannh/hashi": "^0.2.2"
+    "@elouannh/hashi": "^0.2.6",
+    "prettier": "^3.1.1"
   }
 }
