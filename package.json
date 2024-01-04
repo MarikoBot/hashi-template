@@ -1,6 +1,6 @@
 {
   "name": "bot-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A bot template to use the hashi package.",
   "main": "lib/index.js",
   "scripts": {
