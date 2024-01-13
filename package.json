@@ -2,7 +2,38 @@
   "name": "bot-template",
   "version": "0.1.1",
   "description": "A bot template to use the hashi package.",
+  "keywords": [
+    "discord",
+    "bot",
+    "template",
+    "discord.js"
+  ],
+  "homepage": "https://github.com/MarikoBot/hashi-template#readme",
+  "bugs": {
+    "url": "https://github.com/MarikoBot/hashi-template/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Elouann Panda",
+    "email": "elouannpro@proton.me"
+  },
+  "contributors": [
+    {
+      "name": "Elouann Panda",
+      "email": "elouannpro@proton.me"
+    }
+  ],
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://paypal.me/elouannpanda?country.x=FR&locale.x=fr_FR"
+    }
+  ],
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarikoBot/hashi-template.git"
+  },
   "scripts": {
     "run-builder": "node builder.js",
     "prettier": "prettier -w src",
@@ -14,18 +45,12 @@
     "publish-minor": "npm version minor && git push && git push --tags",
     "publish-major": "npm version major && git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elouannh/hashi-template.git"
-  },
-  "author": "elouannh",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/elouannh/hashi-template/issues"
-  },
-  "homepage": "https://github.com/elouannh/hashi-template#readme",
   "dependencies": {
     "@elouannh/hashi": "^0.2.6",
     "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=21.1.0",
+    "npm": ">=10.2.0"
   }
 }
