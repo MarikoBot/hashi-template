@@ -1,4 +1,4 @@
-import { COMMAND_END, Context, HashiClient, HashiSlashCommand, HashiSlashSubcommand } from '@elouannh/hashi';
+import { COMMAND_END, Context, HashiClient, HashiSlashCommand } from '@elouannh/hashi';
 import { ChatInputCommandInteraction } from 'discord.js';
 
 const ping = async (
@@ -6,7 +6,7 @@ const ping = async (
   interaction: ChatInputCommandInteraction,
   ctx: Context,
 ): Promise<COMMAND_END> => {
-  await interaction.reply({ content: 'Pong!' }).catch(client.Logger.clean);
+  await interaction.reply({ content: 'Pong!' }).catch(client.logger.clean);
   return ctx.command.end();
 };
 
