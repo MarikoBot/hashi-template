@@ -2,30 +2,50 @@
   "name": "bot-template",
   "version": "0.1.1",
   "description": "A bot template to use the hashi package.",
+  "keywords": [
+    "discord",
+    "bot",
+    "template",
+    "discord.js"
+  ],
+  "homepage": "https://github.com/MarikoBot/hashi-template#readme",
+  "bugs": {
+    "url": "https://github.com/MarikoBot/hashi-template/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Elouann H.",
+    "email": "elouannpro@proton.me"
+  },
+  "contributors": [
+    {
+      "name": "Elouann H.",
+      "email": "elouannpro@proton.me"
+    }
+  ],
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarikoBot/hashi-template.git"
+  },
   "scripts": {
     "run-builder": "node builder.js",
     "prettier": "prettier -w src",
     "save": "git add ./",
     "build": "npm run run-builder && npm run prettier && tsc && npm run save",
-    "dev": "npm install @elouannh/hashi@latest && npm run build && node .",
+    "start": "npm run build && node .",
+    "dev": "npm install @elouannh/hashi@latest && npm run start",
     "prepublish": "npm run build && git commit -m \"[AUTO] Build\"",
     "publish-patch": "npm version patch && git push && git push --tags",
     "publish-minor": "npm version minor && git push && git push --tags",
     "publish-major": "npm version major && git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elouannh/hashi-template.git"
-  },
-  "author": "elouannh",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/elouannh/hashi-template/issues"
-  },
-  "homepage": "https://github.com/elouannh/hashi-template#readme",
   "dependencies": {
-    "@elouannh/hashi": "^0.2.6",
+    "@elouannh/hashi": "^0.3.8",
     "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=21.1.0",
+    "npm": ">=10.2.0"
   }
 }
