@@ -1,0 +1,7 @@
+.git
+.idea
+node_modules
+
+.env
+package-lock.json
+linter-output.txt
