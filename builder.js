@@ -5,4 +5,4 @@ const { rmSync, mkdirSync} = require('fs');
  * @returns {*}
  */
 const reset = (dir) => void [rmSync(`./${dir}`, { recursive: true }), mkdirSync(`./${dir}`)];
-['lib', 'types'].forEach(reset);
+['lib'].forEach(reset);

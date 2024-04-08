@@ -1,6 +1,10 @@
 import * as dotenv from 'dotenv';
 dotenv.config({ path: `${__dirname}/../.env` });
 
+import webhook from './webhook';
+
+webhook();
+
 // import { HashiClient } from 'marikobot-hashi';
 //
 // const client: HashiClient = new HashiClient({
