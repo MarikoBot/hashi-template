@@ -51,6 +51,7 @@
     "build": "npm run clean && npm run run-builder && tsc && git add .",
     "prepublish": "npm run build && git commit -m \"[BUILD] Automatic build\"",
     "test-ts": "ts-node lab/lab.test.ts",
+    "dev": "npm run build && node ./lib/index.js",
     "post-version-push": "git add . && git push && git push --tags",
     "publish-patch": "npm version patch && npm run post-version-push",
     "publish-minor": "npm version minor && npm run post-version-push",
