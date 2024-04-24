@@ -6,8 +6,6 @@
     "target": "es2022",
     "module": "commonjs",
     "outDir": "./lib",
-    "declaration": true,
-    "declarationDir": "./types",
     "skipLibCheck": true,
     "typeRoots": ["node_modules/@types", "./types/index.d.ts"]
   },

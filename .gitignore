@@ -1,9 +1,6 @@
 .git
-.idea
 node_modules
 
-temp
 .env
-lib
 package-lock.json
 linter-output.txt

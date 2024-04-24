@@ -50,8 +50,8 @@
     "clean": "npm run prettier && npm run lint",
     "build": "npm run clean && npm run run-builder && tsc && git add .",
     "prepublish": "npm run build && git commit -m \"[BUILD] Automatic build\"",
-    "test-ts": "ts-node src/index.ts",
-    "post-version-push": "git push && git push --tags",
+    "test-ts": "ts-node lab/lab.test.ts",
+    "post-version-push": "git add . && git push && git push --tags",
     "publish-patch": "npm version patch && npm run post-version-push",
     "publish-minor": "npm version minor && npm run post-version-push",
     "publish-major": "npm version major && npm run post-version-push",
@@ -59,8 +59,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "marikobot-hashi": "^2.0.1-devbuild.1",
-    "pdfjs-dist": "^4.0.379"
+    "marikobot-hashi": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8.53.0",
