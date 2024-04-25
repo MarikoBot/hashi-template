@@ -11,7 +11,7 @@ export const client: Client = new Client({
   },
   mongoose: {
     dbName: 'hashi-plate',
-    connectionURI: 'mongodb://127.0.0.1:27017/',
+    connectionURI: `mongodb://${process.env.MONGO_URI}:27017/`,
     connectOptions: { dbName: 'hashi-plate', family: 4 },
   },
 });

@@ -46,7 +46,7 @@
   "scripts": {
     "run-builder": "node builder.js",
     "prettier": "prettier -w src",
-    "lint": "tslint --config tslint.json --project tsconfig.json 'src/**/*.ts' > linter-output.txt",
+    "lint": "tslint --config tslint.json --project tsconfig.json 'src/**/*.ts' > out/linter-output.txt",
     "clean": "npm run prettier && npm run lint",
     "build": "npm run clean && npm run run-builder && tsc && git add .",
     "prepublish": "npm run build && git commit -m \"[BUILD] Automatic build\"",
