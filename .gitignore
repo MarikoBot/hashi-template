@@ -1,6 +1,7 @@
 .git
 node_modules
 
-.env
+*/.env
+
 package-lock.json
-linter-output.txt
+pnpm-lock.yaml

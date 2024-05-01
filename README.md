@@ -23,7 +23,39 @@ Original package link:
 ## Requirements
 
 Node.js and a package manager (Yarn, PNPM, NPM) installed in your environment.
-## Installation
+
+## Contributing
+
+### Creating a new version
+
+First, let's build the package:
+```bash
+npm run clean; node builder.js; tsc; git add .
+```
+
+Secondly, let's box our files into a commit:
+```bash
+git commit -m "My message!"
+```
+
+Then, let's update the version:
+```bash
+npm version <patch|minor|major|prerelease --preid=devbuild>
+```
+
+Finally, let's publish the new version and push it to GitHub:
+```bash
+git push; git push --tags
+```
+
+Well done!
+
+### Run the code
+
+To run the code, just execute:
+```bash
+node lib/index.js
+```
 
 ## Used By
 

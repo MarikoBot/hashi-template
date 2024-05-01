@@ -3,18 +3,7 @@ dotenv.config({ path: `${__dirname}/../.env` });
 
 import { Client } from 'marikobot-hashi';
 
-export const client: Client = new Client({
-  intents: 3276799,
-  projectName: 'Hashi-Template',
-  configChannels: {
-    status: '1228631187459670046',
-  },
-  mongoose: {
-    dbName: 'hashi-plate',
-    connectionURI: `mongodb://${process.env.MONGO_URI}:27017/`,
-    connectOptions: { dbName: 'hashi-plate', family: 4 },
-  },
-});
+export const client: Client = new Client({ ...require('../hashi.config.json'), failIfNotExists: false });
 void client.connectDatabase();
 
 import * as commands from './commands';
